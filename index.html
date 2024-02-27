@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+<section>
+        <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label>ENTER YOUR NAME</label><br>
+                <input type="text" name="" id="nameId">
+            </div>
+            <div class="imgDic">
+                <img src="images.png" width="200" height="200" class="imgChang">
+            </div>
+            <button>click</button>
+        </div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const name =$('#nameId').val();
+            alert(name);
+            $('.imgChang').attr('src',`https://joesch.moe/api/v1/${name}`);
+        });
+    });
+</script>
+</body>
+</html>
